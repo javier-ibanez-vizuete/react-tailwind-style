@@ -22,8 +22,8 @@ export const Navbar = () => {
 				</NavLink>
 				{isDesktop && (
 					<div className="flex justify-center gap-2 items-center">
-						<Link to={"/login-page"} className="mr-4">{TEXTS[lang].navSignUp}</Link>
-						<Link to={"/register-page"} className="p-3 px-6 bg-[#3366FF] rounded-md">{TEXTS[lang].navLogIn}</Link>
+						<Link to={"/register-page"} className="mr-4">{TEXTS[lang].navSignUp}</Link>
+						<Link to={"/login-page"} className="p-3 px-6 bg-[#3366FF] rounded-md">{TEXTS[lang].navLogIn}</Link>
 					</div>
 				)}
 			</div>
