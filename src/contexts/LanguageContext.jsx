@@ -10,8 +10,18 @@ export const LanguageProvider = ({ children }) => {
 	};
 
 	const TEXTS = {
-		en: {},
-		es: {},
+		en: {
+			navSignUp: "Sign Up",
+			navLogIn: "Log in",
+
+			altPetWorldLogoText: "Petworld name",
+		},
+		es: {
+			navSignUp: "Registrarse",
+			navLogIn: "Iniciar Sesion",
+
+			altPetWorldLogoText: "Nombre Petworld",
+		},
 	};
 
 	return <LanguageContext value={{ lang, TEXTS, onToggleLang }}>{children}</LanguageContext>;
