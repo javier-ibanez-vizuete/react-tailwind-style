@@ -9,9 +9,7 @@ export const App = () => {
 
 	return (
 		<div className="app-container">
-			<header>
 				<Navbar />
-			</header>
 			<main>
 				<Routes>
 					<Route path="/" element={<h1>TITULO PAGINA</h1>} />
