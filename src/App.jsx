@@ -20,7 +20,7 @@ export const App = () => {
 	const { lang, languages, getText, handleLang } = LanguageFallBackTemporary;
 
 	return (
-		<div className="app-container">
+		<div className="app-container ">
 			<header>
 				<Navbar />
 			</header>
@@ -34,6 +34,8 @@ export const App = () => {
 					<Route element={<PrivateRoute />}>
 						<Route path="/user" element={<h2>RUTA PRIVADA</h2>} />
 					</Route>
+
+					<Route path="/*" element={<h1>PAGINA NO ENCONTRADA</h1>} />
 				</Routes>
 			</main>
 			<Footer />

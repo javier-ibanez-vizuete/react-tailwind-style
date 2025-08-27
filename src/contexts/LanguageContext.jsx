@@ -48,6 +48,10 @@ export const LanguageProvider = ({ children }) => {
 			textNewsFormInputPlaceholder: "Email Address...",
 			textNewsFormButton1: "Send",
 
+			linksFooterSectionLi1: "Our Story",
+			linksFooterSectionLi2: "Pet Care",
+			linksFooterSectionLi3: "Shop",
+
 			errorNotEmailAdded: "Not Email Added",
 			errorEmailAdded1: "Email not Valid (Missing: '@')",
 			errorEmailAdded2: "Email not Valid (Missing: '.')",
