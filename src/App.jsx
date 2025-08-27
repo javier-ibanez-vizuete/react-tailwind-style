@@ -1,9 +1,13 @@
-import { Route, Routes } from "react-router-dom";
+import { Link, NavLink, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { PrivateRoute } from "./components/PrivateRoute";
 import { useContext } from "react";
 import { LanguageContext } from "./contexts/LanguageContext";
 import { HomePage } from "./pages/HomePage";
+
+import petWorldTitle from "./assets/pictures/petworld.png";
+import petWorldLogo from "./assets/pictures/petworld-logo.png";
+import { Footer } from "./components/Footer";
 
 export const App = () => {
 	// cosnt { LanguageFallBackTemporary, languages, handleLang } = useContext(LanguageContext);
@@ -13,7 +17,7 @@ export const App = () => {
 	if (!LanguageFallBackTemporary) {
 		console.log("No se encuentra languageFallBackTemporary", LanguageFallBackTemporary);
 	}
-	const { lang, languages, handleLang } = LanguageFallBackTemporary;
+	const { lang, languages, getText, handleLang } = LanguageFallBackTemporary;
 
 	return (
 		<div className="app-container">
@@ -32,17 +36,7 @@ export const App = () => {
 					</Route>
 				</Routes>
 			</main>
-			<footer>
-				<select name="lang" id="lang" value={lang} onChange={(event) => handleLang(event.target.value)}>
-					{Object.entries(languages).map(([codeLang, language]) => {
-						return (
-							<option key={language} value={codeLang}>
-								{language}
-							</option>
-						);
-					})}
-				</select>
-			</footer>
+			<Footer />
 		</div>
 	);
 };

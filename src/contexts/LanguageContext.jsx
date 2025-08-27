@@ -43,6 +43,16 @@ export const LanguageProvider = ({ children }) => {
 			textContactUsSectionHeading: "Let’s talk, woof!",
 			textContactUsSectionBody1: "You can ask us questions about your pet, and we will be happy to answer you!",
 			textContactUsSectionButton1: "Contact us",
+
+			textNewsFormLabel: "Updates right to your inbox",
+			textNewsFormInputPlaceholder: "Email Address...",
+			textNewsFormButton1: "Send",
+
+			errorNotEmailAdded: "Not Email Added",
+			errorEmailAdded1: "Email not Valid (Missing: '@')",
+			errorEmailAdded2: "Email not Valid (Missing: '.')",
+			errorEmailAddedShorter: "Email to Short (Min 4 Characters)",
+			errorEmailAddedLonger: "Email to long (Max 30 Characters)",
 		},
 		es: {
 			navSignUp: "Registrarse",
