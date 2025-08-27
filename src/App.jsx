@@ -6,7 +6,7 @@ import { LanguageContext } from "./contexts/LanguageContext";
 import { HomePage } from "./pages/HomePage";
 
 export const App = () => {
-	const { lang, onToggleLang } = useContext(LanguageContext);
+	const { lang, languages, handleLang } = useContext(LanguageContext);
 
 	return (
 		<div className="app-container">
@@ -26,7 +26,15 @@ export const App = () => {
 				</Routes>
 			</main>
 			<footer>
-				<button onClick={onToggleLang}>CAMBIAR IDIOMA</button>
+				<select name="lang" id="lang" value={lang} onChange={(event) => handleLang(event.target.value)}>
+					{Object.entries(languages).map(([codeLang, language]) => {
+						return (
+							<option key={language} value={codeLang}>
+								{language}
+							</option>
+						);
+					})}
+				</select>
 			</footer>
 		</div>
 	);

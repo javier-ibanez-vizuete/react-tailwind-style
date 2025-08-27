@@ -1,1 +1,68 @@
 @import "tailwindcss";
+
+:root {
+	--bg: #0b1020;
+	--panel: #101735;
+	--muted: #8aa0ff;
+	--text: #e6ecff;
+	--accent: #4b6bff;
+	--ok: #22c55e;
+	--warn: #f59e0b;
+	--danger: #ef4444;
+
+	--nav-item-text-color: #c7d2ff;
+	--nav-item-text-color-hover: white;
+	--nav-item-bg-color: #1a2244;
+	--nav-item-bg-color-hover: #2a3563;
+	--nav-item-bg-color-active: #6174c2;
+
+	--bg-color: #101735;
+	--bg-accent-color: #0e1530;
+	--primary-text-color: #003243;
+	--secondary-text-color: #c7d2ff;
+
+	--bg-color-dark: #1e1e1e;
+	--primary-text-color-dark: #e2e2e2;
+	--secondary-text-color-dark: #739fad;
+
+	--btn-xtra-color-dark: rgba(255, 255, 255, 0.1);
+
+	--btn-primary-color: #ff4400;
+	--btn-primary-color-hover: #eb4306;
+	--btn-secondary-color: #003243;
+	--btn-secondary-color-hover: #00212e;
+	--btn-xtra-color: rgba(0, 50, 67, 0.2);
+
+	--btn-text-color-dark: #ffffff;
+	--btn-text-color-dark-invert: #003243;
+
+	--btn-primary-color-dark: #ff5a2f;
+	--btn-primary-color-dark-hover: #ff3e14;
+	--btn-secondary-color-dark: #2a8a99;
+	--btn-secondary-color-dark-hover: #1d6c7a;
+
+	--shadow-soft: 0 0px 10px rgba(0, 0, 0, 0.2);
+	--shadow-hover: 0 0px 14px rgba(0, 0, 0, 0.4);
+
+	--font-size-html: 15px;
+	--font-family: "Roboto", "Poppins", Helvetica, "bodyfont", "doggyfont", "cattyfont", "bunnyfont", -apple-system,
+		BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol";
+	--font-weight-bold: 800;
+	--font-weight-normal: 500;
+
+	--spacing-xs: 4px;
+	--spacing-sm: 8px;
+	--spacing-md: 12px;
+	--spacing-lg: 16px;
+	--spacing-2xl: 36px;
+	--spacing-4xl: 60px;
+
+	--border-radius-card: 4px;
+
+	--container-width: 90%;
+}
+
+/* @apply{
+    --javi-color
+} */
