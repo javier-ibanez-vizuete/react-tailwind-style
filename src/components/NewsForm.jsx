@@ -49,8 +49,8 @@ export const NewsForm = () => {
 				>
 					{getText("textNewsFormButton1")}
 				</button>
-				{errorKey && <p className="text-red-500 italic">{getText(errorKey)}</p>}
 			</div>
+			{errorKey && <p className="text-red-500 italic">{getText(errorKey)}</p>}
 		</div>
 	);
 };

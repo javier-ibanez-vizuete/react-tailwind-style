@@ -12,8 +12,8 @@ import { NewsForm } from "./NewsForm";
 import { useDevice } from "../hooks/useDevice";
 
 export const Footer = () => {
-	const { lang, languages, getText } = useContext(LanguageContext);
-	const { isMobile, isTablet, isDesktop } = useDevice();
+	const { lang, languages, getText, handleLang } = useContext(LanguageContext);
+	const { isMobile, isDesktop } = useDevice();
 
 	return (
 		<footer className="flex flex-col py-10 px-5 gap-10 xl:py-[70px] xl:px-20">
@@ -42,7 +42,7 @@ export const Footer = () => {
 				{isDesktop && (
 					<div className="flex gap-14">
 						<div className="flex flex-col gap-4">
-							<h5 className="text-[18px] font-semibold">Our Story</h5>
+							<h5 className="text-[18px] font-semibold">{getText("linksFooterSectionLi1")}</h5>
 							<ul className="flex flex-col gap-4">
 								<li>
 									<Link to="*" className="text-[#2d2d2d]">
@@ -50,48 +50,48 @@ export const Footer = () => {
 									</Link>
 								</li>
 								<li>
-									<Link to="*" className="text-[#2d2d2d]">
-										Contact
+									<Link to="/contact" className="text-[#2d2d2d]">
+										{getText("linksFooterSectionLi4")}
 									</Link>
 								</li>
 							</ul>
 						</div>
 						<div className="flex flex-col gap-4">
-							<h5 className="text-[18px] font-semibold">Pet Care</h5>
+							<h5 className="text-[18px] font-semibold">{getText("linksFooterSectionLi2")}</h5>
 							<ul className="flex flex-col gap-4">
 								<li>
 									<Link to="*" className="text-[#2d2d2d]">
-										Treatments
+										{getText("linksFooterSectionLi5")}
 									</Link>
 								</li>
 								<li>
 									<Link to="*" className="text-[#2d2d2d]">
-										Health
+										{getText("linksFooterSectionLi6")}
 									</Link>
 								</li>
 								<li>
 									<Link to="*" className="text-[#2d2d2d]">
-										Hygiene
+										{getText("linksFooterSectionLi7")}
 									</Link>
 								</li>
 							</ul>
 						</div>
 						<div className="flex flex-col gap-4">
-							<h5 className="text-[18px] font-semibold">Shop</h5>
+							<h5 className="text-[18px] font-semibold">{getText("linksFooterSectionLi3")}</h5>
 							<ul className="flex flex-col gap-4">
 								<li>
 									<Link to="*" className="text-[#2d2d2d]">
-										Pet Food
+										{getText("linksFooterSectionLi8")}
 									</Link>
 								</li>
 								<li>
 									<Link to="*" className="text-[#2d2d2d]">
-										Toys
+										{getText("linksFooterSectionLi9")}
 									</Link>
 								</li>
 								<li>
 									<Link to="*" className="text-[#2d2d2d]">
-										Accesories
+										{getText("linksFooterSectionLi910")}
 									</Link>
 								</li>
 							</ul>
@@ -101,16 +101,16 @@ export const Footer = () => {
 			</div>
 			<div className="flex flex-col gap-10 xl:flex-row xl:justify-between xl:items-center">
 				<div className="flex flex-col gap-5 xl:flex-row-reverse xl:justify-end">
-					<Link to={"*"} className="text-[#2d2d2d] font-semibold text-[18px]">
-						Terms of use
+					<Link to={"/policy-terms"} className="text-[#2d2d2d] font-semibold text-[18px]">
+						{getText("linksFooterPolicyTerms")}
 					</Link>
-					<Link to={"*"} className="text-[#2d2d2d] font-semibold text-[18px]">
-						Privacy policy
+					<Link to={"/privacy-policy"} className="text-[#2d2d2d] font-semibold text-[18px]">
+						{getText("linksFooterPrivacyPolicy")}
 					</Link>
 					<p className="text-[#2d2d2d] font-semibold text-[18px]">© PETWORLD 2022</p>
 				</div>
-				<div className="flex justify-center items-center p-4 bg-amber-200">
-					<select name="lang" id="lang" value={lang} onChange={(event) => handleLang(event.target.value)}>
+				<div className="flex justify-center items-center">
+					<select className="px-2 py-1 border-1" name="lang" id="lang" value={lang} onChange={(event) => handleLang(event.target.value)}>
 						{Object.entries(languages).map(([codeLang, language]) => {
 							return (
 								<option key={language} value={codeLang}>

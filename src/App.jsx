@@ -1,13 +1,13 @@
-import { Link, NavLink, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { PrivateRoute } from "./components/PrivateRoute";
 import { useContext } from "react";
 import { LanguageContext } from "./contexts/LanguageContext";
 import { HomePage } from "./pages/HomePage";
-
-import petWorldTitle from "./assets/pictures/petworld.png";
-import petWorldLogo from "./assets/pictures/petworld-logo.png";
 import { Footer } from "./components/Footer";
+import { LoginPage } from "./pages/LoginPage";
+import { RegisterPage } from "./pages/RegisterPage";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 export const App = () => {
 	// cosnt { LanguageFallBackTemporary, languages, handleLang } = useContext(LanguageContext);
@@ -25,11 +25,14 @@ export const App = () => {
 				<Navbar />
 			</header>
 			<main>
+				<ScrollToTop />
 				<Routes>
-					<Route path="/" element={<HomePage />} />
+					<Route path="/" element={<Navigate to={"/home"} />} />
+					<Route path="/home" element={<HomePage />} />
 
-					<Route path="/login-page" element={<h1>LOGIN PAGE</h1>} />
-					<Route path="/register-page" element={<h1>REGISTER PAGE</h1>} />
+					<Route path="/login-page" element={<LoginPage />} />
+					<Route path="/register-page" element={<RegisterPage />} />
+					<Route path="/contact" element={<h1>PAGINA CONTACTO</h1>} />
 
 					<Route element={<PrivateRoute />}>
 						<Route path="/user" element={<h2>RUTA PRIVADA</h2>} />

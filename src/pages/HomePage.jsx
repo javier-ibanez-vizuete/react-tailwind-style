@@ -31,7 +31,7 @@ export const HomePage = () => {
 						{getText("textHeroSectionHeading1")}
 					</h1>
 					<p className="text-[#2D2D2D] opacity-50">{getText("textHeroSectionBody1")}</p>
-					<Link to="/login-page" className="bg-[#F8D57E] px-13 py-4 rounded-lg xl:px-13 xl:py-4">
+					<Link to="/register-page" className="bg-[#F8D57E] px-13 py-4 rounded-lg xl:px-13 xl:py-4">
 						{getText("textHeroSectionButton1")}
 					</Link>
 				</article>
@@ -40,7 +40,7 @@ export const HomePage = () => {
 				</div>
 			</Section>
 			<div className="flex flex-row px-5 py-14 bg-[#F7F5FD] xl:px-64 xl:py-[70px]">
-				<div className="flex justify-center items-center">
+				<div className="flex flex-1 justify-center items-center">
 					<img src={videoHomePage} alt="PetWorldVideo" />
 				</div>
 			</div>
