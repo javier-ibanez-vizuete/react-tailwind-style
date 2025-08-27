@@ -6,7 +6,14 @@ import { LanguageContext } from "./contexts/LanguageContext";
 import { HomePage } from "./pages/HomePage";
 
 export const App = () => {
-	const { lang, languages, handleLang } = useContext(LanguageContext);
+	// cosnt { LanguageFallBackTemporary, languages, handleLang } = useContext(LanguageContext);
+	const LanguageFallBackTemporary = useContext(LanguageContext);
+
+	// Esto es para que no me crashe la app cada vez que actualizo el codigo
+	if (!LanguageFallBackTemporary) {
+		console.log("No se encuentra languageFallBackTemporary", LanguageFallBackTemporary);
+	}
+	const { lang, languages, handleLang } = LanguageFallBackTemporary;
 
 	return (
 		<div className="app-container">

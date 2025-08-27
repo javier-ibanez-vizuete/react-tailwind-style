@@ -36,6 +36,13 @@ export const LanguageProvider = ({ children }) => {
 			textServiceSectionMedicalBody1: "You can get a wide range of great treatments for your dog.",
 			textServiceSectionGroomingHeading: "Full service grooming",
 			textServiceSectionGroomingBody1: "It's the right time to groom your dog with a variety of treatments.",
+
+			textQuoteArticleHeading: `We love using 'PETWORLD' products.  Environmentally friendly and sustainable. We have the sustainable dog bowls and regularly use the mint scented poo bags which were all such great value for money.`,
+			textQuoteArticleSignature: "Dylan Shaw",
+
+			textContactUsSectionHeading: "Let’s talk, woof!",
+			textContactUsSectionBody1: "You can ask us questions about your pet, and we will be happy to answer you!",
+			textContactUsSectionButton1: "Contact us",
 		},
 		es: {
 			navSignUp: "Registrarse",
