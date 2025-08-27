@@ -104,12 +104,12 @@ export const HomePage = () => {
 					</article>
 				</div>
 			</section>
-			<article className="flex px-12 py-6 bg-[#ECE7FB]">
-				<div className="flex flex-col flex-1 gap-[60px]">
-					<div className="flex justify-center items-center w-[260px]">
+			<article className="flex px-12 py-6 bg-[#ECE7FB] xl:justify-center xl:py-12 xl:px-56">
+				<div className="flex flex-col flex-1 gap-[60px] xl:flex-row xl:items-center" >
+					<div className="flex justify-center items-center w-[260px] xl:w-[352px] xl:flex-1">
 						<img className="w-full" src={imageQuoteSection} alt="Image man with a Hat" />
 					</div>
-					<div className="flex flex-col gap-10">
+					<div className="flex flex-col gap-10 xl:flex-1">
 						<div className="flex flex-col gap-5">
 							<div className="flex justify-center items-center w-16">
 								<img className="w-full" src={iconQuote} alt="Quote Icon" />
